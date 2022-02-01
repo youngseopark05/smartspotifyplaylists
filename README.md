@@ -8,7 +8,7 @@ Here it is folks, all yours - just read these few notes before you begin!
 *Clarification: I wrote and ran this code on a MacOS command line, so just be aware when setting up libraries or environment variables to run commands compatible to YOUR system!
 
 ### Install the Right Libraries
-This short piece of code uses the Python3 language, as well as the JSON and Spotipy Python3 libraries. 
+This short piece of code uses the Python3 language, as well as the [JSON](https://docs.python.org/3/library/json.html) and [Spotipy](https://spotipy.readthedocs.io/en/2.19.0/#) Python3 libraries. 
 Spotipy is specifically designed for accessing Spotify's Web API, allowing you to gain full access to all music data on the platform. 
 
 Spotipy isn't a built-in library, so you can install it by running: 
