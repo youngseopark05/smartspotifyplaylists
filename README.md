@@ -10,11 +10,12 @@ Here it is folks, all yours - just read these few notes before you begin!
 ### Install the Right Libraries
 This short piece of code uses the Python3 language, as well as the JSON and Spotipy Python3 libraries. 
 Spotipy is specifically designed for accessing Spotify's Web API, allowing you to gain full access to all music data on the platform. 
-Install the necessary Python packages by running: 
-`pip3 install -r requirements.txt` and `pip3 install spotipy --upgrade` on your terminal.
+
+Spotipy isn't a built-in library, so you can install it by running: 
+`pip3 install spotipy --upgrade` on your terminal.
 
 ### Set Up a Spotify for Developers Application
-To start, set up an account at [Spotify for Developers](https://developer.spotify.com/dashboard/), and create an application. This will give you get the credentials necessary to make authorized calls - a client id and client secret. These will be 2 of 3 environment variables to be exported.
+Next, set up an account at [Spotify for Developers](https://developer.spotify.com/dashboard/), and create an application. This will give you get the credentials necessary to make authorized calls - a client id and client secret. These will be 2 of 3 environment variables to be exported.
 
 This code uses the [Authorization Code Flow](https://spotipy.readthedocs.io/en/2.19.0/#authorization-code-flow) for the Spotipy library. [This link](https://spotipy.readthedocs.io/en/2.19.0/#redirect-uri) tells you how to set up your redirect URI, the last of your environment variables. 
 
