@@ -26,11 +26,8 @@ list_history_viewable = []
 history = spotifyObject.current_user_recently_played(limit=num_tracks_to_visualise)
 
 #Obtaining Last Played Tracks
-i = 0
-while i <= (num_tracks_to_visualise -1) :
-
+for i in range(0, num_tracks_to_visualise) :
 	json.dumps(history,sort_keys=4,indent=4)
-	
 	list_history.append(history['items'][i]['track']['uri'])
 	songname_history = history['items'][i]['track']['name']
 	artistname_history = history['items'][i]['track']['artists'][0]['name']
@@ -38,8 +35,6 @@ while i <= (num_tracks_to_visualise -1) :
 	id_history = history['items'][i]['track']['id']
 	list_history_viewable.append(fullname_history)
 	list_id_history.append(id_history)
-	
-	i = i+1
 
 #Printing Last Played Tracks
 print("Here are your",num_tracks_to_visualise,"recently streamed tracks.")
@@ -57,14 +52,12 @@ recommendations = spotifyObject.recommendations(limit=50, seed_tracks = seed_tra
 #Appending Recommended Tracks to Playlist
 list_rec = []
 list_rec_viewable = []
-j = 0
-while j <= 49 :
+for j in range(0,50) :
 	list_rec.append(recommendations['tracks'][j]['uri'])
 	artistname_rec = recommendations['tracks'][j]['artists'][0]['name']
 	songname_rec = recommendations['tracks'][j]['name']
 	fullname_rec = songname_rec + " by " + artistname_rec
 	list_rec_viewable.append(fullname_rec)
-	j = j+1
 
 #Showing Recommended Tracks
 print("Here are 50 song reccomendations based on your seed tracks.\nThey'll be put into your new playlist immediately.")
