@@ -26,7 +26,7 @@ list_history_viewable = []
 history = spotifyObject.current_user_recently_played(limit=num_tracks_to_visualise)
 
 #Obtaining Last Played Tracks
-for i in range(0, num_tracks_to_visualise) :
+for i in range(num_tracks_to_visualise) :
 	json.dumps(history,sort_keys=4,indent=4)
 	list_history.append(history['items'][i]['track']['uri'])
 	songname_history = history['items'][i]['track']['name']
@@ -52,7 +52,7 @@ recommendations = spotifyObject.recommendations(limit=50, seed_tracks = seed_tra
 #Appending Recommended Tracks to Playlist
 list_rec = []
 list_rec_viewable = []
-for j in range(0,50) :
+for j in range(50) :
 	list_rec.append(recommendations['tracks'][j]['uri'])
 	artistname_rec = recommendations['tracks'][j]['artists'][0]['name']
 	songname_rec = recommendations['tracks'][j]['name']
